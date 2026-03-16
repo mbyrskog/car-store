@@ -1,0 +1,20 @@
+[
+  {
+    "Id": "1",
+    "Brand": "Volvo",
+    "Model": "XC60",
+    "Price": 40000,
+    "Category": "SUV",
+    "Specs": {
+      "Year": 2020,
+      "Mileage": 50000,
+      "Color": "Black",
+      "Transmission": "Automatic",
+      "Fuel": "Gasoline",
+      "Effect": {
+        "KiloWatt": 180,
+        "HorsePower": 245
+      }
+    }
+  }
+]
