@@ -5,7 +5,9 @@ namespace CarStore.Presentation;
 
 public class ConsoleApp
 {
-    private readonly CarService _service;
+    private readonly CarService _carService;
+    private readonly CurrencyService _currencyService;
+
     private readonly ConsoleRenderer _renderer = new();
 
     private IReadOnlyList<Car> _allCars = [];
@@ -15,14 +17,15 @@ public class ConsoleApp
     private decimal _currencyRate = 1m;
     private decimal _distanceMultiplier = 1m;
 
-    public ConsoleApp(CarService service)
+    public ConsoleApp(CarService carService, CurrencyService currencyService)
     {
-        _service = service;
+        _carService = carService;
+        _currencyService = currencyService;
     }
 
     public async Task RunAsync(CancellationToken cancellationToken)
     {
-        _allCars = await _service.GetAllCarsAsync(cancellationToken);
+        _allCars = await _carService.GetAllCarsAsync(cancellationToken);
         _visibleCars = _allCars;
 
         _renderer.WriteColoredLine("Welcome to the CarStore", ConsoleColor.Cyan);
@@ -33,9 +36,9 @@ public class ConsoleApp
         {
             _renderer.DisplayOptions();
 
-            System.Console.Write("Enter an option: ");
-            var key = System.Console.ReadKey(intercept: true).Key;
-            System.Console.WriteLine();
+            Console.Write("Enter an option: ");
+            var key = Console.ReadKey(intercept: true).Key;
+            Console.WriteLine();
 
             switch (key)
             {
@@ -98,10 +101,10 @@ public class ConsoleApp
     private void ApplyFilter()
     {
         var filters = string.Join(", ", Enum.GetNames<CarFilterType>());
-        System.Console.WriteLine($"Available filters: {filters}");
+        Console.WriteLine($"Available filters: {filters}");
 
-        System.Console.Write("Enter an option: ");
-        var rawFilter = (System.Console.ReadLine() ?? string.Empty).Trim();
+        Console.Write("Enter an option: ");
+        var rawFilter = (Console.ReadLine() ?? string.Empty).Trim();
 
         if (!Enum.TryParse<CarFilterType>(rawFilter, true, out var filterType))
         {
@@ -109,12 +112,19 @@ public class ConsoleApp
             return;
         }
 
-        System.Console.Write("Enter value: ");
-        var input = (System.Console.ReadLine() ?? string.Empty).Trim();
-        var success = _service.TryFilter(_visibleCars, filterType, input, out var filteredCars);
+        Console.Write("Enter value: ");
+        var input = (Console.ReadLine() ?? string.Empty).Trim();
+        var success = _carService.TryFilter(_visibleCars, filterType, input, out var filteredCars);
+
         if (!success)
         {
-            _renderer.WriteColoredLine("No cars matched or invalid input.", ConsoleColor.Red);
+            _renderer.WriteColoredLine("Invalid input.", ConsoleColor.Red);
+            return;
+        }
+
+        if (filteredCars.Count == 0)
+        {
+            _renderer.WriteColoredLine("No cars matched.", ConsoleColor.Yellow);
             return;
         }
 
@@ -132,40 +142,21 @@ public class ConsoleApp
 
     private void ChangeCurrency()
     {
-        System.Console.WriteLine("Available currencies: USD, GBP, SEK, DKK");
-        System.Console.Write("Enter currency: ");
-        var input = (System.Console.ReadLine() ?? string.Empty).Trim().ToUpperInvariant();
+        Console.WriteLine("Available currencies: USD, GBP, SEK, DKK");
+        Console.Write("Enter currency: ");
+        var input = (Console.ReadLine() ?? string.Empty).Trim();
 
-        switch (input)
+        var rate = _currencyService.GetRate(input);
+
+        if (rate is null)
         {
-            case "USD":
-                _currencyName = "USD";
-                _currencyRate = 1m;
-                _distanceMultiplier = 1m;
-                break;
-
-            case "GBP":
-                _currencyName = "GBP";
-                _currencyRate = 0.71m;
-                _distanceMultiplier = 1m;
-                break;
-
-            case "SEK":
-                _currencyName = "SEK";
-                _currencyRate = 8.38m;
-                _distanceMultiplier = 0.1609344m;
-                break;
-
-            case "DKK":
-                _currencyName = "DKK";
-                _currencyRate = 6.06m;
-                _distanceMultiplier = 0.1609344m;
-                break;
-
-            default:
-                _renderer.WriteColoredLine("Invalid currency. Keeping current selection.", ConsoleColor.Red);
-                return;
+            _renderer.WriteColoredLine("Invalid currency. Keeping current selection.", ConsoleColor.Red);
+            return;
         }
+
+        _currencyName = input.ToUpperInvariant();
+        _currencyRate = rate.Value;
+        _distanceMultiplier = _currencyService.GetDistanceMultiplier(_currencyName);
 
         _renderer.WriteColoredLine($"Currency set to {_currencyName}.", ConsoleColor.DarkYellow);
     }

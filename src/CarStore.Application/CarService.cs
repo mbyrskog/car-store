@@ -23,7 +23,7 @@ public sealed class CarService
         string input,
         out IReadOnlyList<Car> filteredCars)
     {
-        filteredCars = cars;
+        filteredCars = [];
 
         int? number = null;
 
@@ -48,14 +48,8 @@ public sealed class CarService
             _ => cars
         };
 
-        var result = filtered.ToList();
+        filteredCars = filtered.ToList();
 
-        if (result.Count == 0)
-        {
-            return false;
-        }
-
-        filteredCars = result;
         return true;
     }
 }
