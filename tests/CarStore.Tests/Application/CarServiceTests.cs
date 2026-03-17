@@ -50,7 +50,7 @@ public class CarServiceTests
             out var filteredCars);
 
         Assert.False(ok);
-        Assert.Equal(before, filteredCars.Count);
+        Assert.Empty(filteredCars);
     }
 
     [Fact]

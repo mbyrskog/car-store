@@ -1,32 +1,24 @@
 # CarStore
 
-Console-based car listing application built with .NET. Browse cars, apply filters, switch currency and explore paginated or grouped results.
+Console-based car listing app built with .NET. Browse cars, apply filters, switch currency, and view paginated or grouped results.
 
-## 🚀 Tech Stack
+## Tech
 
 - .NET 10
 - C#
 - xUnit
 - System.Text.Json
 
-## 🎮 Features
+## Features
 
-- Load cars from JSON file
-- Filter cars by:
-  - Brand
-  - Model
-  - Category
-  - Transmission
-  - Year
-  - Mileage
-- Reset filters
-- Paginated listing
-- Group cars by price range
+- Load cars from JSON
+- Filter by brand, model, category, transmission, year, mileage
+- Pagination and price grouping
 - Currency switching (USD, SEK, GBP, DKK)
-- Unit tests across Domain, Application and Infrastructure layers
+- Unit tests across layers
 
-## 🛠 Run locally
+## Run
 
 - Open solution in Visual Studio
 - Set `CarStore.Presentation` as startup project
-- Press Run / F5
+- Run (F5)
