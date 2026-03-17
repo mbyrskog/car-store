@@ -2,14 +2,14 @@
 
 Console-based car listing app built with .NET. Browse cars, apply filters, switch currency, and view paginated or grouped results.
 
-## Tech
+## 🚀 Tech Stack
 
 - .NET 10
 - C#
 - xUnit
 - System.Text.Json
 
-## Features
+## 🎮 Features
 
 - Load cars from JSON
 - Filter by brand, model, category, transmission, year, mileage
@@ -17,7 +17,7 @@ Console-based car listing app built with .NET. Browse cars, apply filters, switc
 - Currency switching (USD, SEK, GBP, DKK)
 - Unit tests across layers
 
-## Run
+## 🛠 Run locally
 
 - Open solution in Visual Studio
 - Set `CarStore.Presentation` as startup project
