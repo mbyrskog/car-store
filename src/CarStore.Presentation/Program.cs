@@ -10,6 +10,7 @@ using var host = Host.CreateDefaultBuilder(args)
     {
         services.AddSingleton<ICarRepository, CarRepository>();
         services.AddSingleton<CarService>();
+        services.AddSingleton<CurrencyService>();
         services.AddTransient<ConsoleApp>();
     })
     .Build();
