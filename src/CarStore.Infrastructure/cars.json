@@ -1,0 +1,379 @@
+[
+  {
+    "id": "8a3ec5a0-4a6a-11ec-9d67-0f8fe8f2b3e5",
+    "brand": "Toyota",
+    "model": "Corolla",
+    "price": 21000,
+    "category": "Sedan",
+    "specs": {
+      "year": 2022,
+      "mileage": 15000,
+      "color": "Black",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "kilowatt": 80
+    }
+  },
+  {
+    "id": "8a3ee56a-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Honda",
+    "model": "Civic",
+    "price": 23000,
+    "category": "Hatchback",
+    "specs": {
+      "year": 2021,
+      "mileage": 18000,
+      "color": "Blue",
+      "transmission": "Manual",
+      "fuel": "Gasoline",
+      "kilowatt": 92
+    }
+  },
+  {
+    "id": "2289dcef-8e5d-49a4-822a-e378a5b9af55",
+    "brand": "Tesla",
+    "model": "Model 3",
+    "price": 50000,
+    "category": "Sedan",
+    "specs": {
+      "year": 2022,
+      "mileage": 8000,
+      "color": "Black",
+      "transmission": "Automatic",
+      "fuel": "Electric",
+      "kilowatt": 150
+    }
+  },
+  {
+    "id": "f9b3dcd1-5d21-4f80-b3dd-f4fbcffb016f",
+    "brand": "Chevrolet",
+    "model": "Camaro",
+    "price": 35000,
+    "category": "Coupe",
+    "specs": {
+      "year": 2021,
+      "mileage": 12000,
+      "color": "Red",
+      "transmission": "Manual",
+      "fuel": "Gasoline",
+      "kilowatt": 300
+    }
+  },
+  {
+    "id": "8a3eed1c-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Jeep",
+    "model": "Wrangler",
+    "price": 32000,
+    "category": "SUV",
+    "specs": {
+      "year": 2020,
+      "mileage": 25000,
+      "color": "Green",
+      "transmission": "Manual",
+      "fuel": "Gasoline",
+      "kilowatt": 120
+    }
+  },
+  {
+    "id": "8a3ef11e-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "BMW",
+    "model": "X5",
+    "price": 60000,
+    "category": "SUV",
+    "specs": {
+      "year": 2021,
+      "mileage": 16000,
+      "color": "White",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "kilowatt": 180
+    }
+  },
+  {
+    "id": "8a3ef328-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Audi",
+    "model": "A4",
+    "price": 40000,
+    "category": "Sedan",
+    "specs": {
+      "year": 2022,
+      "mileage": 12000,
+      "color": "Gray",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "kilowatt": 120
+    }
+  },
+  {
+    "id": "8a3ef44a-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Volkswagen",
+    "model": "Golf",
+    "price": 25000,
+    "category": "Hatchback",
+    "specs": {
+      "year": 2020,
+      "mileage": 22000,
+      "color": "Yellow",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "kilowatt": 80
+    }
+  },
+
+  {
+    "id": "8a3ec5a0-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Toyota",
+    "model": "Corolla",
+    "price": 22000,
+    "category": "Sedan",
+    "specs": {
+      "year": 2022,
+      "mileage": 15000,
+      "color": "White",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "kilowatt": 80
+    }
+  },
+  {
+    "id": "8a3ee66a-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Honda",
+    "model": "Civic",
+    "price": 23000,
+    "category": "Hatchback",
+    "specs": {
+      "year": 2021,
+      "mileage": 18000,
+      "color": "Blue",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "kilowatt": 92
+    }
+  },
+  {
+    "id": "8a3ee864-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Ford",
+    "model": "Escape",
+    "price": 27000,
+    "category": "SUV",
+    "specs": {
+      "year": 2020,
+      "mileage": 20000,
+      "color": "Silver",
+      "transmission": "Automatic",
+      "fuel": "Hybrid",
+      "kilowatt": 110
+    }
+  },
+  {
+    "id": "8a3eea78-4a6a-11ec-9d67-0f8fa8f2b3e2",
+    "brand": "Chevrolet",
+    "model": "Camaro",
+    "price": 35000,
+    "category": "Coupe",
+    "specs": {
+      "year": 2021,
+      "mileage": 12000,
+      "color": "Red",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "kilowatt": 300
+    }
+  },
+  {
+    "id": "8a3eec02-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Tesla",
+    "model": "Model 3",
+    "price": 50000,
+    "category": "Sedan",
+    "specs": {
+      "year": 2022,
+      "mileage": 8000,
+      "color": "Black",
+      "transmission": "Automatic",
+      "fuel": "Electric",
+      "kilowatt": 250
+    }
+  },
+  {
+    "id": "8a3eef14-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Mercedes-Benz",
+    "model": "C-Class",
+    "price": 45000,
+    "category": "Sedan",
+    "specs": {
+      "year": 2022,
+      "mileage": 10000,
+      "color": "Silver",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "kilowatt": 120
+    }
+  },
+  {
+    "id": "8a3ef0e8-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "BMW",
+    "model": "X5",
+    "price": 60000,
+    "category": "SUV",
+    "specs": {
+      "year": 2021,
+      "mileage": 15000,
+      "color": "Blue",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "kilowatt": 180
+    }
+  },
+  {
+    "id": "8a3ef1dc-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Audi",
+    "model": "A4",
+    "price": 38000,
+    "category": "Sedan",
+    "specs": {
+      "year": 2020,
+      "mileage": 18000,
+      "color": "Gray",
+      "transmission": "Automatic",
+      "fuel": "Diesel",
+      "kilowatt": 110
+    }
+  },
+  {
+    "id": "8a3ef35a-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Volkswagen",
+    "model": "Golf",
+    "price": 25000,
+    "category": "Hatchback",
+    "specs": {
+      "year": 2022,
+      "mileage": 12000,
+      "color": "White",
+      "transmission": "Automatic",
+      "fuel": "Electric",
+      "kilowatt": 100
+    }
+  },
+  {
+    "id": "8a3ef48a-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Hyundai",
+    "model": "Tucson",
+    "price": 28000,
+    "category": "SUV",
+    "specs": {
+      "year": 2021,
+      "mileage": 15000,
+      "color": "Red",
+      "transmission": "Automatic",
+      "fuel": "Hybrid",
+      "kilowatt": 120
+    }
+  },
+  {
+    "id": "8a3ef5c8-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Subaru",
+    "model": "Outback",
+    "price": 30000,
+    "category": "Wagon",
+    "specs": {
+      "year": 2020,
+      "mileage": 20000,
+      "color": "Green",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "kilowatt": 110
+    }
+  },
+  {
+    "id": "8a3ef6f8-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Kia",
+    "model": "Sportage",
+    "price": 26000,
+    "category": "SUV",
+    "specs": {
+      "year": 2021,
+      "mileage": 18000,
+      "color": "Black",
+      "transmission": "Manual",
+      "fuel": "Gasoline",
+      "kilowatt": 92
+    }
+  },
+  {
+    "id": "8a3ef824-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Mazda",
+    "model": "CX-5",
+    "price": 32000,
+    "category": "SUV",
+    "specs": {
+      "year": 2022,
+      "mileage": 15000,
+      "color": "Blue",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "kilowatt": 120
+    }
+  },
+  {
+    "id": "8a3ef956-4a6a-11ec-9d67-0f8fe8f2b3e2",
+    "brand": "Nissan",
+    "model": "Altima",
+    "price": 25000,
+    "category": "Sedan",
+    "specs": {
+      "year": 2020,
+      "mileage": 22000,
+      "color": "Silver",
+      "transmission": "Automatic",
+      "fuel": "Gasoline",
+      "kilowatt": 100
+    }
+  },
+  {
+    "id": "633fe07d-d2b2-4480-b837-64387bdfd070",
+    "brand": "Volkswagen",
+    "model": "Golf",
+    "price": 23500,
+    "category": "Hatchback",
+    "specs": {
+      "year": 2021,
+      "mileage": 30000,
+      "color": "Blue",
+      "transmission": "Manual",
+      "fuel": "Gasoline",
+      "kilowatt": 85
+    }
+  },
+  {
+    "id": "e0794ba6-80c8-4279-96c0-1bd890b49bf2",
+    "brand": "Toyota",
+    "model": "Corolla",
+    "price": 17500,
+    "category": "Sedan",
+    "specs": {
+      "year": 2020,
+      "mileage": 42000,
+      "color": "Silver",
+      "transmission": "Manual",
+      "fuel": "Gasoline",
+      "kilowatt": 90
+    }
+  },
+  {
+    "id": "5846f14f-ded1-4fb5-850b-f094eaa6438b",
+    "brand": "Toyota",
+    "model": "Corolla",
+    "price": 19800,
+    "category": "Sedan",
+    "specs": {
+      "year": 2021,
+      "mileage": 28000,
+      "color": "Red",
+      "transmission": "Automatic",
+      "fuel": "Hybrid",
+      "kilowatt": 103
+    }
+  }
+
+]
