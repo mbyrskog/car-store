@@ -40,4 +40,24 @@ public class CarSearchTests
         Assert.Equal("BMW", fullYear[0].Brand);
         Assert.Empty(partOfYear);
     }
+
+    [Fact]
+    public void Search_MatchesColorAndFuel()
+    {
+        var cars = new List<Car>
+        {
+            new("1", "Volvo", "XC60", 1, "SUV",
+                new CarSpecs(2020, 1, "Red", "Automatic", "Gasoline", 1)),
+            new("2", "Tesla", "Model 3", 1, "Sedan",
+                new CarSpecs(2022, 1, "Black", "Automatic", "Electric", 1)),
+        };
+
+        var byColor = CarSearch.Search(cars, "red").ToList();
+        var byFuel = CarSearch.Search(cars, "electric").ToList();
+
+        Assert.Single(byColor);
+        Assert.Equal("Volvo", byColor[0].Brand);
+        Assert.Single(byFuel);
+        Assert.Equal("Tesla", byFuel[0].Brand);
+    }
 }
