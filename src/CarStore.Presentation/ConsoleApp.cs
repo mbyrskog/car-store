@@ -98,7 +98,7 @@ public sealed class ConsoleApp
 
     private void Search()
     {
-        Console.Write("Search within current results (brand, model, year, category or transmission, empty resets): ");
+        Console.Write("Search within current results (brand, model, year, color, category, transmission or fuel, empty resets): ");
         var input = (Console.ReadLine() ?? string.Empty).Trim();
 
         if (input.Length == 0)

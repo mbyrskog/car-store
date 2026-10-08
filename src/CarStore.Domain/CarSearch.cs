@@ -16,6 +16,8 @@ public static class CarSearch
             c.Model.Contains(text, StringComparison.OrdinalIgnoreCase) ||
             c.Specs.Year.ToString() == text ||
             c.Category.Contains(text, StringComparison.OrdinalIgnoreCase) ||
-            c.Specs.Transmission.Contains(text, StringComparison.OrdinalIgnoreCase));
+            c.Specs.Transmission.Contains(text, StringComparison.OrdinalIgnoreCase) ||
+            c.Specs.Color.Contains(text, StringComparison.OrdinalIgnoreCase) ||
+            c.Specs.Fuel.Contains(text, StringComparison.OrdinalIgnoreCase));
     }
 }
