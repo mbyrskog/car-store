@@ -4,15 +4,15 @@ namespace CarStore.Presentation;
 
 public sealed class ConsoleRenderer
 {
-    private const int BrandWidth = 16;
-    private const int ModelWidth = 11;
-    private const int YearWidth = 7;
-    private const int ColorWidth = 9;
-    private const int CategoryWidth = 12;
-    private const int TransmissionWidth = 15;
-    private const int FuelWidth = 11;
-    private const int MileageWidth = 8;
-    private const int PowerWidth = 16;
+    private const int BrandWidth = 18;
+    private const int ModelWidth = 13;
+    private const int YearWidth = 6;
+    private const int ColorWidth = 8;
+    private const int CategoryWidth = 11;
+    private const int TransmissionWidth = 14;
+    private const int FuelWidth = 10;
+    private const int MileageWidth = 7;
+    private const int PowerWidth = 15;
     private const decimal KmPerMile = 1.609344m;
 
     public void WriteColoredLine(string message, ConsoleColor color)
