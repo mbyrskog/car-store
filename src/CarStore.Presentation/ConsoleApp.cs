@@ -90,6 +90,10 @@ public sealed class ConsoleApp
                 $"Search: {string.Join(" > ", _searchTerms)} ({_visibleCars.Count} of {_allCars.Count} cars)",
                 ConsoleColor.Green);
         }
+        else
+        {
+            _renderer.WriteColoredLine($"All cars ({_allCars.Count})", ConsoleColor.Green);
+        }
 
         _renderer.PrintCars(
             _visibleCars,
@@ -100,7 +104,7 @@ public sealed class ConsoleApp
 
     private void Search()
     {
-        Console.Write("Search within current results (brand, model, year, color, category, transmission or fuel, empty resets): ");
+        Console.Write("Search (brand, model, year, color, category, transmission, fuel; empty resets): ");
         var input = (Console.ReadLine() ?? string.Empty).Trim();
 
         if (input.Length == 0)
@@ -113,7 +117,7 @@ public sealed class ConsoleApp
 
         if (matches.Count == 0)
         {
-            _renderer.WriteColoredLine("No cars matched.", ConsoleColor.Green);
+            _renderer.WriteColoredLine("No cars matched.", ConsoleColor.Yellow);
             return;
         }
 
@@ -126,6 +130,7 @@ public sealed class ConsoleApp
     {
         _searchTerms.Clear();
         _visibleCars = _allCars;
+        Console.Clear();
         _renderer.WriteColoredLine("Search reset.", ConsoleColor.Green);
     }
 
