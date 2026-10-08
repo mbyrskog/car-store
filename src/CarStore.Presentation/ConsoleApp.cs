@@ -82,6 +82,8 @@ public sealed class ConsoleApp
 
     private void PrintCars()
     {
+        Console.Clear();
+
         if (_searchTerms.Count > 0)
         {
             _renderer.WriteColoredLine(
