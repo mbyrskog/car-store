@@ -4,7 +4,15 @@ namespace CarStore.Presentation;
 
 public sealed class ConsoleRenderer
 {
-    private const int ColWidth = 16;
+    private const int BrandWidth = 18;
+    private const int ModelWidth = 13;
+    private const int YearWidth = 6;
+    private const int ColorWidth = 8;
+    private const int CategoryWidth = 11;
+    private const int TransmissionWidth = 14;
+    private const int FuelWidth = 10;
+    private const int MileageWidth = 7;
+    private const int PowerWidth = 15;
     private const decimal KmPerMile = 1.609344m;
 
     public void WriteColoredLine(string message, ConsoleColor color)
@@ -43,25 +51,30 @@ public sealed class ConsoleRenderer
 
         foreach (var car in cars)
         {
-            Console.Write(car.Brand.PadRight(ColWidth) + car.Model.PadRight(ColWidth));
-            Console.Write(car.Specs.Year.ToString().PadRight(ColWidth));
-            Console.Write(car.Category.PadRight(ColWidth) + car.Specs.Transmission.PadRight(ColWidth));
-            Console.Write($"{car.Specs.Mileage * distanceMultiplier:0}".PadRight(ColWidth));
+            Console.Write(car.Brand.PadRight(BrandWidth) + car.Model.PadRight(ModelWidth));
+            Console.Write(car.Specs.Year.ToString().PadRight(YearWidth) + car.Specs.Color.PadRight(ColorWidth));
+            Console.Write(car.Category.PadRight(CategoryWidth) + car.Specs.Transmission.PadRight(TransmissionWidth));
+            Console.Write(car.Specs.Fuel.PadRight(FuelWidth));
+            Console.Write($"{car.Specs.Mileage * distanceMultiplier:0}".PadRight(MileageWidth));
+            Console.Write($"{car.Specs.Kilowatt} / {car.Specs.Horsepower}".PadRight(PowerWidth));
             Console.WriteLine($"{car.Price * currencyRate:N0}");
         }
     }
 
     private string GetTableHeader(string currencyName, bool useKilometers)
     {
-        var distanceLabel = useKilometers ? "km" : "miles";
+        var distanceLabel = useKilometers ? "Km" : "Miles";
 
         return
-            "Brand".PadRight(ColWidth) +
-            "Model".PadRight(ColWidth) +
-            "Year".PadRight(ColWidth) +
-            "Category".PadRight(ColWidth) +
-            "Transmission".PadRight(ColWidth) +
-            $"Mileage ({distanceLabel})".PadRight(ColWidth) +
+            "Brand".PadRight(BrandWidth) +
+            "Model".PadRight(ModelWidth) +
+            "Year".PadRight(YearWidth) +
+            "Color".PadRight(ColorWidth) +
+            "Category".PadRight(CategoryWidth) +
+            "Transmission".PadRight(TransmissionWidth) +
+            "Fuel".PadRight(FuelWidth) +
+            distanceLabel.PadRight(MileageWidth) +
+            "Power (kW/hp)".PadRight(PowerWidth) +
             $"Price ({currencyName})";
     }
 }

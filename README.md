@@ -13,8 +13,9 @@ Console-based car listing app built with .NET. Browse cars sorted by price, sear
 
 - Load cars from JSON
 - Cars sorted by price
+- Table shows color, fuel and power (kW/hp) for each car
 - Mileage in miles (USD, GBP) or km (SEK, DKK), following the chosen currency
-- Search by brand, model, year, category or transmission; each search narrows the current results
+- Search by brand, model, year, color, category, transmission or fuel; each search narrows the current results
 - Currency switching (USD, SEK, GBP, DKK)
 - Unit tests across layers
 
